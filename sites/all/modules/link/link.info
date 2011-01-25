@@ -21,9 +21,9 @@ project = "link"
 datestamp = "1287403997"
 
 
-; Information added by drupal.org packaging script on 2010-12-13
-version = "7.x-1.x-dev"
+; Information added by drupal.org packaging script on 2011-01-16
+version = "7.x-1.0-alpha2"
 core = "7.x"
 project = "link"
-datestamp = "1292280800"
+datestamp = "1295189003"
 
