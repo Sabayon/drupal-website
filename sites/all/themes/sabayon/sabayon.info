@@ -22,11 +22,11 @@ base theme = zen
   ; You can also override any of Zen's stylesheets or any module's stylesheets,
   ; an /extremely/ useful feature. See the excellent Drupal 7 Theme Guide at
   ; http://drupal.org/node/171209 for more details.
-stylesheets[all][]   = http://static.sabayon.org/site/css/reset-min.css
-stylesheets[all][]   = http://static.sabayon.org/site/css/global.css
-stylesheets[all][]   = http://static.sabayon.org/site/css/global_menu.css
-stylesheets[all][]   = http://static.sabayon.org/site/css/global_styles.css
-stylesheets[all][]   = http://static.sabayon.org/site/css/style.css
+stylesheets[all][]   = css/reset-min.css
+stylesheets[all][]   = css/global.css
+stylesheets[all][]   = css/global_menu.css
+stylesheets[all][]   = css/global_styles.css
+stylesheets[all][]   = css/style.css
 
 stylesheets[all][]   = css/wireframes.css
 stylesheets[all][]   = css/layout-fixed.css
