@@ -224,7 +224,6 @@
 
 	<div id="copyright">
 		<?php print render($page['copyright']); ?>
-		<p>&copy; 2004-2011 Sabayon Promotion (CF: 93018620224) - Trademarks are property of their respective owners. </p>
 	</div>
 
 	</div></div> <!-- footer wrapper end -->

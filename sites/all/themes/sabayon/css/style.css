@@ -85,7 +85,6 @@
  * Middle Blocks 
  */
 .block {
-	color: #222;
 	position: relative;
 	margin-bottom: 2em;
 	clear: both;
@@ -120,7 +119,6 @@
 	text-transform: uppercase;
 }
 
-.block p,
 #mid_content p,
 #mid_content_right p {
 	font-size: 1.2em;

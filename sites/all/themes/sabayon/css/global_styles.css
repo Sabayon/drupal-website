@@ -112,9 +112,13 @@ h1.title {
 	display: none;
 }
 
-#footer_wrapper #copyright {
+#footer_wrapper #copyright .region-copyright {
 	clear: both;
 	margin: 2em;
 	text-align: center;
 	font-size: 1.2em;
+}
+
+#copyright .region-copyright .content {
+	font-size: 0.8.em;
 }
