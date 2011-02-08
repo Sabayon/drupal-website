@@ -83,34 +83,15 @@
 </div>
 <div id="page-wrapper"><div id="page">
 	<div id="top_wrapper"><!--top wrapper start -->
-	<div class="inside">
-
-  <div id="header"><div class="section">
-
-    <?php if ($site_name || $site_slogan): ?>
-      <div id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <?php if ($title): ?>
-            <h1 id="title" class="title">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><?php print $site_name; ?></a>
-            </h1>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <div id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-      </div> <!-- /#name-and-slogan -->
-    <?php endif; ?>
-
-    <?php print render($page['header']); ?>
-
-  </div></div> <!-- /.section, /#header -->
-	</div></div><!-- top wrapper end -->
+		<div class="inside">
+			<div id="block1" class="top_block">
+				<?php print render($page['top_summary']); ?>
+			</div>
+			<div id="slides">
+				<?php print render($page['top_slides']); ?>
+			</div>
+		</div>
+	</div><!-- top wrapper end -->
 
 	<div id="mid_wrapper"><div class="inside"><!-- mid wrapper start -->
   <div id="main-wrapper"><div id="main" class="<?php if ($main_menu || $page['navigation']) { print 'with-navigation'; } ?>">
