@@ -103,15 +103,16 @@
 	<div id="mid_wrapper"><div class="inside"><!-- mid wrapper start -->
   <div id="main-wrapper"><div id="main" class="<?php if ($main_menu || $page['navigation']) { print 'with-navigation'; } ?>">
 
-    <div id="content" class="column"><div class="section">
+    <div id="content">
+	<div class="section">
 	<?php if ($is_front): ?>
 		<div id="col1" class="col_mid">
 			<?php print render($page['front_col_left']); ?>
 		</div>
-		<div id="col1" class="col_mid col_center">
+		<div id="col2" class="col_mid col_center">
 			<?php print render($page['front_col_mid']); ?>
 		</div>
-		<div id="col1" class="col_mid">
+		<div id="col3" class="col_mid">
 			<?php print render($page['front_col_right']); ?>
 		</div>
 	<?php else: ?>
@@ -155,9 +156,10 @@
     <?php print render($page['sidebar_first']); ?>
 
     <?php print render($page['sidebar_second']); ?>
-	<?php endif; ?>
 
-  </div></div> <!-- /#main, /#main-wrapper -->
+
+	</div></div> <!-- /#main, /#main-wrapper -->
+	<?php endif; ?>
   </div></div> <!-- end mid wrapper -->
 
 	<div id="footer_wrapper"><div class="inside"><!-- footer wrapper start -->
