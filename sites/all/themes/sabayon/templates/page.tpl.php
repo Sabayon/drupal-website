@@ -100,67 +100,25 @@
 		</div>
 	</div><!-- top wrapper end -->
 
-	<div id="mid_wrapper"><div class="inside"><!-- mid wrapper start -->
-  <div id="main-wrapper"><div id="main" class="<?php if ($main_menu || $page['navigation']) { print 'with-navigation'; } ?>">
-
-    <div id="content">
-	<div class="section">
-	<?php if ($is_front): ?>
-		<div id="col1" class="col_mid">
-			<?php print render($page['front_col_left']); ?>
-		</div>
-		<div id="col2" class="col_mid col_center">
-			<?php print render($page['front_col_mid']); ?>
-		</div>
-		<div id="col3" class="col_mid">
-			<?php print render($page['front_col_right']); ?>
-		</div>
-	<?php else: ?>
-	  <?php print render($page['highlight']); ?>
-      <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
-      <?php print $messages; ?>
-      <?php if ($tabs): ?>
-        <div class="tabs"><?php print render($tabs); ?></div>
-      <?php endif; ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-
-    </div></div> <!-- /.section, /#content -->
-
-    <?php if ($page['navigation'] || $main_menu): ?>
-      <div id="navigation"><div class="section ">
-
-        <?php print theme('links__system_main_menu', array(
-          'links' => $main_menu,
-          'attributes' => array(
-            'id' => 'main-menu',
-            'class' => array('links', ''),
-          ),
-          'heading' => array(
-            'text' => t('Main menu'),
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-
-        <?php print render($page['navigation']); ?>
-
-      </div></div> <!-- /.section, /#navigation -->
-    <?php endif; ?>
-
-    <?php print render($page['sidebar_first']); ?>
-
-    <?php print render($page['sidebar_second']); ?>
-
-
-	</div></div> <!-- /#main, /#main-wrapper -->
-	<?php endif; ?>
-  </div></div> <!-- end mid wrapper -->
+	<div id="mid_wrapper">
+		<div class="inside"><!-- mid wrapper start -->
+			<div id="content">
+				<?php if ($is_front): ?>
+					<div id="col1" class="col_mid">
+						<?php print render($page['front_col_left']); ?>
+					</div>
+					<div id="col2" class="col_mid col_center">
+						<?php print render($page['front_col_mid']); ?>
+					</div>
+					<div id="col3" class="col_mid">
+						<?php print render($page['front_col_right']); ?>
+					</div>
+				<?php else: ?>
+					<?php print render($page['content']); ?>
+				<?php endif; ?>
+			</div><!-- /content -->
+		</div><!-- /inside -->
+	</div> <!-- /mid wrapper -->
 
 	<div id="footer_wrapper"><div class="inside"><!-- footer wrapper start -->
 
