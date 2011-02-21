@@ -104,7 +104,18 @@
   <div id="main-wrapper"><div id="main" class="<?php if ($main_menu || $page['navigation']) { print 'with-navigation'; } ?>">
 
     <div id="content" class="column"><div class="section">
-      <?php print render($page['highlight']); ?>
+	<?php if ($is_front): ?>
+		<div id="col1" class="col_mid">
+			<?php print render($page['front_col_left']); ?>
+		</div>
+		<div id="col1" class="col_mid col_center">
+			<?php print render($page['front_col_mid']); ?>
+		</div>
+		<div id="col1" class="col_mid">
+			<?php print render($page['front_col_right']); ?>
+		</div>
+	<?php else: ?>
+	  <?php print render($page['highlight']); ?>
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
       <?php print $messages; ?>
@@ -117,6 +128,7 @@
       <?php endif; ?>
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
+
     </div></div> <!-- /.section, /#content -->
 
     <?php if ($page['navigation'] || $main_menu): ?>
@@ -143,6 +155,7 @@
     <?php print render($page['sidebar_first']); ?>
 
     <?php print render($page['sidebar_second']); ?>
+	<?php endif; ?>
 
   </div></div> <!-- /#main, /#main-wrapper -->
   </div></div> <!-- end mid wrapper -->
