@@ -6,7 +6,7 @@
 	clear: both;
 	position: relative;
 	padding: 0 0 1em 0;
-	background: url('../img/top_bg.png') repeat-x bottom;
+	background: url('http://static.sabayon.org/site/img/top_bg.png') repeat-x bottom;
 }
 
 h1.title {
@@ -22,7 +22,7 @@ h1.title {
 #mid_wrapper {
 	overflow: auto;
 	color: #222;
-	background: #DDD url('../mid_bg.png') repeat-x top;
+	background: #DDD url('http://static.sabayon.org/site/img/mid_bg.png') repeat-x top;
 }
 
 .col_mid {
@@ -34,6 +34,21 @@ h1.title {
 
 .col_center {
 	margin: 1em 3em 0 3em;
+}
+
+/* Base Styles */
+
+.block p, #mid_content p, #mid_content_right p {
+	font-size: 1.2em;
+	line-height: 1.6em;
+	margin-bottom: 1.2em;
+}
+
+
+.block h2, #mid_content h2, #mid_content_right h2 {
+	color: #00438A;
+	font-size: 1.7em;
+	margin: 1.3em 0 0.3em;
 }
 
 /*
