@@ -22,7 +22,7 @@ h1.title {
 #mid_wrapper {
 	overflow: auto;
 	color: #222;
-	background: #DDD url('http://static.sabayon.org/site/img/mid_bg.png') repeat-x top;
+	background: #FFF url('http://static.sabayon.org/site/img/mid_bg.png') repeat-x top;
 }
 
 .col_mid {
