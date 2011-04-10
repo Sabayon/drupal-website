@@ -134,6 +134,6 @@ h1.title {
 	font-size: 1.2em;
 }
 
-#copyright .region-copyright .content {
-	font-size: 0.8.em;
+#copyright .region-copyright .content p {
+	font-size: 0.8em;
 }
