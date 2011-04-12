@@ -1,1 +1,33 @@
- 
+#download_icon {
+	background: url("http://static.sabayon.org/site/img/go_bg.png") repeat-x scroll 0 0 transparent;
+	border: 1px solid #447229;
+	border-radius: 0.5em 0.5em 0.5em 0.5em;
+	clear: left;
+	color: #FFFFFF;
+	display: block;
+	font-size: 1.9em;
+	height: 60px;
+	line-height: 60px;
+	margin: 1em 0 0;
+	opacity: 0.95;
+	padding-left: 1em;
+	text-decoration: none;
+}
+
+#download_icon #arrow {
+	background: url("http://static.sabayon.org/site/img/arrowright.png") no-repeat scroll 0 0 transparent;
+	display: block;
+	float: right;
+	height: 30px;
+	margin: 16px 1em 0 0;
+	width: 24px;
+}
+
+/*
+ *	FIXES
+ */
+
+/* Remove margin on front aggregation block*/
+div#block-aggregator-feed-1.block div.content div.item-list ul li {
+	margin : 0;
+}
