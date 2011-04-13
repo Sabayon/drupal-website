@@ -113,9 +113,13 @@
 					<div id="col3" class="col_mid">
 						<?php print render($page['front_col_right']); ?>
 					</div>
-				<?php else: ?>
-					<?php print render($page['content']); ?>
 				<?php endif; ?>
+					<div id="mid_content" class="two_col">
+						<?php print render($page['content']); ?>
+					</div>
+					<div id="mid_content_right" class="col_mid">
+						<?php print render($page['content_right']); ?>
+					</div>
 			</div><!-- /content -->
 		</div><!-- /inside -->
 	</div> <!-- /mid wrapper -->

@@ -66,10 +66,11 @@ regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
 regions[navigation]     = Navigation bar
 regions[highlight]      = Highlighted content
-regions[front_col_left] = Front col (left)
-regions[front_col_mid]  = Front col (mid)
-regions[front_col_right]= Front col (right)
+regions[front_col_left] = Home Top Left Col
+regions[front_col_mid]  = Home Top Mid Col
+regions[front_col_right]= Home Top Right Col
 regions[content]        = Content
+regions[content_right]  = Right Sidebar
 regions[top_summary]    = Top Left Summary
 regions[top_slides]     = Top Right Block
 regions[footer_first]   = Footer (far left)
@@ -78,13 +79,13 @@ regions[footer_third]   = Footer (mid left)
 regions[footer_fourth]  = Footer (mid right)
 regions[footer_fifth]   = Footer (right)
 regions[footer_sixth]   = Footer (far right)
-regions[footer_two_one] = 2nd row of footer (left)
-regions[footer_two_two] = 2nd row of footer (mid)
-regions[footer_two_three] = 2nd row of footer (right)
+regions[footer_two_one] = Sponsor Left
+regions[footer_two_two] = Sponsor Mid
+regions[footer_two_three] = Sponsor Right
 regions[copyright]      = Copyright
-regions[bottom]         = Page bottom
-regions[page_top]       = Page top
-regions[page_bottom]    = Page bottom
+regions[bottom]         = Page Bottom
+regions[page_top]       = Page Top
+regions[page_bottom]    = Page Bottom
 
   ; Various page elements output by the theme can be toggled on and off. The
   ; "features" control which of these check boxes display on the
