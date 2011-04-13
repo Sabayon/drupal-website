@@ -160,21 +160,12 @@
 		<h2>Sponsors</h2>
 		<div id="uob" class="col_mid">
 			<?php print render($page['footer_two_one']); ?>
-			<img src="http://static.sabayon.org/site/img/footer/LogoUNIBS.png" alt="NLNet Foundation"/>
-			<h3>University of Brescia</h3>
-			<p>Housing our Entropy build server inside the Faculty Network Center at the Department of Electronics.</p>
 		</div>
 		<div id="umb" class="col_mid col_center">
 			<?php print render($page['footer_two_two']); ?>
-			<img src="http://static.sabayon.org/site/img/footer/bicocca.png" alt="NLNet Foundation"/>
-			<h3>University of Milano-Bicocca</h3>
-			<p>Housing our Entropy build servers and WWW inside DISCo</p>
 		</div>
 		<div id="nlnet" class="col_mid">
 			<?php print render($page['footer_two_three']); ?>
-			<img src="http://static.sabayon.org/site/img/footer/nlnet-160x60.png" alt="NLNet Foundation"/>
-			<h3>NLNet Foundation</h3>
-			<p>Financially supported the Entropy Project.</p>
 		</div>
 	</div>
 
