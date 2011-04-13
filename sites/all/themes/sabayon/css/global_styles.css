@@ -36,19 +36,37 @@ h1.title {
 	margin: 1em 3em 0 3em;
 }
 
+#mid_content {
+	clear: left;
+	float: left;
+	margin: 1em 3em 0 0;
+	overflow: hidden;
+	width: 63em;
+}
+
+
 /* Base Styles */
 
-.block p, #mid_content p, #mid_content_right p {
+.block p,
+#mid_content p,
+#mid_content_right p {
 	font-size: 1.2em;
 	line-height: 1.6em;
 	margin-bottom: 1.2em;
 }
 
 
-.block h2, #mid_content h2, #mid_content_right h2 {
+.block h2,
+#mid_content h2,
+#mid_content_right h2 {
 	color: #00438A;
 	font-size: 1.7em;
 	margin: 1.3em 0 0.3em;
+}
+
+/* Make Linked h2s blue too */
+#mid_content div.content h2 a{
+	color: #00438A;
 }
 
 /*
