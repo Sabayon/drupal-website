@@ -1,0 +1,69 @@
+/* Mirrors */
+
+/* so we dont push flags down */
+div.mirrors-list h2 {
+	float: left;
+}
+
+div.mirrors-list img.flag {
+	float: right;
+	margin-top: 1.3em;
+}
+
+ul.country-mirrors-list {
+	clear: left;
+	padding-top: 1px;
+	margin-left: 1em;
+}
+
+ul.country-mirrors-list li {
+	list-style-type: none;
+	list-style-image: none;
+	margin-bottom: 1em;
+}
+
+/* Invidual Posts */
+li.country-mirrors-list li div {
+	margin: 0.2em 0;
+}
+
+h3.mirror-name {
+	font-size: 1.5em;
+	margin: 1em 0 0.5em;
+}
+
+.mirror-label {
+	font-size: 1.2em;
+	display: inline;
+	margin-top: 1em;	
+}
+
+.mirror-field-label,
+.mirror-label-mirror-label-http {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin: 0.9em 0 0.2em;
+}
+
+h4.mirror-field-list {
+	margin-top: 1em;
+	font-size: 1.2em;
+}
+
+span.mirror-field {
+	font-weight: bold;
+}
+
+div.mirror-speed {
+	margin-bottom: 1em;
+}
+
+div.mirror-field-list div.item-list ul {
+	list-style-type: circle;
+}
+
+div.mirror-field-list div.item-list ul li {
+	list-style-image: url("../img/bullet.png");
+	margin: 0.1em 0;
+	font-size: 1.25em;
+}
