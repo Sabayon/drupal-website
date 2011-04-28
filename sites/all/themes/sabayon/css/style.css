@@ -1,9 +1,16 @@
 /* Lists */
-li {
+ul.bulletlist li {
 	list-style-image: url("../img/bullet.png");
 	list-style-position: inside;
+	font-size: 1.2em;
+	margin: 0.2em 0 0;
 }
 
+ul.bulletlist {
+	margin-bottom: 1.2em;
+}
+
+/* Block */
 .block a:active, .block a:visited, .block a:link {
 	color: #222222;
 	text-decoration: none;
@@ -34,6 +41,7 @@ li {
 }
 
 /* Front block images */
-.col_mid img {
+img.right {
 	float: right;
+	margin: 0 0 1em 1em;
 }

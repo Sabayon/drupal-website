@@ -88,3 +88,12 @@ h2.block-title /* Block title */ {
 
 #block-user-3 /* "Who's online" block for a list of the online users */ {
 }
+
+/* 
+ *  Per Block Styles
+ */
+
+/* Remove more link */
+#block-aggregator-feed-1 div.more-link {
+	display: none;
+}
