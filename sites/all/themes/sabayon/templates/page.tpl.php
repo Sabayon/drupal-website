@@ -104,7 +104,7 @@
 		<div class="inside"><!-- mid wrapper start -->
 			<div id="content">
 				<?php if ($is_front): ?>
-					<div id="col_above">
+					<div id="home_col_row" class="content_row">
 						<div id="col1" class="col_mid">
 							<?php print render($page['front_col_left']); ?>
 						</div>
@@ -116,7 +116,7 @@
 						</div>
 					</div>
 				<?php endif; ?>
-					<div id="col_below">
+					<div id="page_col_row" class="content_row">
                                         	<div id="all_col1" class="col_mid">
                                         	        <?php print render($page['all_col_left']); ?>
                                         	</div>
@@ -127,7 +127,7 @@
                                         	        <?php print render($page['all_col_right']); ?>
                                         	</div>
 					</div>
-					<div id="main_content_wrapper">
+					<div id="main_content_row" class="content_row">
 						<div id="mid_content" class="two_col">
 							<?php print render($page['content']); ?>
 						</div>
