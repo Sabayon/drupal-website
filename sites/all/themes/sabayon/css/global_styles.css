@@ -25,47 +25,45 @@ h1.title {
 	background: #FFF url('http://static.sabayon.org/site/img/mid_bg.png') repeat-x top;
 }
 
+.content_row {
+	overflow: hidden;
+	clear: both;
+	margin-top: 1em;
+}
+
 .col_mid {
 	width: 30em;
-	margin: 1em 0 0 0;
+	margin: 0;
 	overflow: hidden;
 	float: left;
 }
 
 .col_center {
-	margin: 1em 3em 0 3em;
+	margin: 0 3em 0 3em;
 }
 
 #mid_content {
 	clear: left;
 	float: left;
-	margin: 1em 3em 0 0;
+	margin: 0 3em 0 0;
 	overflow: hidden;
 	width: 63em;
 }
 
-
 /* Base Styles */
-
-.block p,
-#mid_content p,
-#mid_content_right p {
+div#content p {
 	font-size: 1.2em;
 	line-height: 1.6em;
 	margin-bottom: 1.2em;
 }
 
-
-.block h2,
-#mid_content h2,
-#mid_content_right h2 {
+div#content h2 {
 	color: #00438A;
 	font-size: 1.7em;
 	margin: 1.3em 0 0.3em;
 }
-
 /* Make Linked h2s blue too */
-#mid_content div.content h2 a{
+div#content h2 a{
 	color: #00438A;
 }
 
