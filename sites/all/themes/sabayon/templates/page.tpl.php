@@ -104,21 +104,36 @@
 		<div class="inside"><!-- mid wrapper start -->
 			<div id="content">
 				<?php if ($is_front): ?>
-					<div id="col1" class="col_mid">
-						<?php print render($page['front_col_left']); ?>
-					</div>
-					<div id="col2" class="col_mid col_center">
-						<?php print render($page['front_col_mid']); ?>
-					</div>
-					<div id="col3" class="col_mid">
-						<?php print render($page['front_col_right']); ?>
+					<div id="col_above">
+						<div id="col1" class="col_mid">
+							<?php print render($page['front_col_left']); ?>
+						</div>
+						<div id="col2" class="col_mid col_center">
+							<?php print render($page['front_col_mid']); ?>
+						</div>
+						<div id="col3" class="col_mid">
+							<?php print render($page['front_col_right']); ?>
+						</div>
 					</div>
 				<?php endif; ?>
-					<div id="mid_content" class="two_col">
-						<?php print render($page['content']); ?>
+					<div id="col_below">
+                                        	<div id="all_col1" class="col_mid">
+                                        	        <?php print render($page['all_col_left']); ?>
+                                        	</div>
+                                        	<div id="all_col2" class="col_mid col_center">
+                                        	        <?php print render($page['all_col_mid']); ?>
+                                        	</div>
+                                        	<div id="all_col3" class="col_mid">
+                                        	        <?php print render($page['all_col_right']); ?>
+                                        	</div>
 					</div>
-					<div id="mid_content_right" class="col_mid">
-						<?php print render($page['content_right']); ?>
+					<div id="main_content_wrapper">
+						<div id="mid_content" class="two_col">
+							<?php print render($page['content']); ?>
+						</div>
+						<div id="mid_content_right" class="col_mid">
+							<?php print render($page['content_right']); ?>
+						</div>
 					</div>
 			</div><!-- /content -->
 		</div><!-- /inside -->
