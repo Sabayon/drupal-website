@@ -67,6 +67,16 @@
  * @see template_process()
  */
 ?>
+
+<?php
+if ($is_front) {
+	drupal_add_js(drupal_get_path('theme', 'sabayon') . '/js/jquery_cycle.js', 'file');
+	drupal_add_js(drupal_get_path('theme', 'sabayon') . '/js/front_cycle_config.js', 'file');
+}
+?>
+
+<?php print drupal_get_path('theme', 'sabayon') ?>
+
 <div id="sab_global_menu">
 	<div id="sab_global_menu_inner" class="inside">
 		<ul>
