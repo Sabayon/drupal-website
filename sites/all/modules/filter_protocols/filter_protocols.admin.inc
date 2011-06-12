@@ -20,10 +20,10 @@ function filter_protocols_settings_form() {
 function filter_protocols_settings_form_validate($form, &$form_state) {
   $protocols = &$form_state['values']['filter_allowed_protocols'];
   $protocols = drupal_strtolower(trim($protocols));
-  $protocols = preg_split('/[\W]+/', $protocols, 0, PREG_SPLIT_NO_EMPTY);
+  $protocols = preg_split('/[\s]+/', $protocols, 0, PREG_SPLIT_NO_EMPTY);
   $protocols = array_unique($protocols);
   foreach ($protocols as $protocol) {
-    if (preg_match('/[^a-z]/', $protocol)) {
+    if (!preg_match('/^[a-z][\w]*$/', $protocol)) {
       form_set_error('filter_allowed_protocols', t('Invalid protocol %protocol.', array('%protocol' => $protocol)));
     }
   }
