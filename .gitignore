@@ -1,2 +1,2 @@
-sites/*/settings.php
-temp
+sites/default/settings.php
+sites/all/modules/devel_themer/*
