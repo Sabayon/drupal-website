@@ -75,8 +75,6 @@ if ($is_front) {
 }
 ?>
 
-<?php print drupal_get_path('theme', 'sabayon') ?>
-
 <div id="sab_global_menu">
 	<div id="sab_global_menu_inner" class="inside">
 		<ul>

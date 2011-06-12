@@ -38,6 +38,11 @@ ul.bulletlist {
 /* This is the main image, top right */
 #slides {
 	float: right;
+	overflow: hidden;
+}
+
+#sides div.content {
+	overflow: hidden;
 }
 
 /* Front block images */
