@@ -61,6 +61,7 @@ div#content h2 {
 	color: #00438A;
 	font-size: 1.7em;
 	margin: 1.3em 0 0.3em;
+	text-shadow: 0px 1px #BBB;
 }
 /* Make Linked h2s blue too */
 div#content h2 a{
