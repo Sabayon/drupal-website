@@ -143,8 +143,8 @@ if ($is_front) {
 					</div>
 					<div id="main_content_row" class="content_row">
 						<div id="mid_content" class="two_col">
-							<?php if (!$is_front) { print render($page['content']);
-							} else { print render($page['front_content']);}?>
+							<?php if ($is_front) { print render($page['content_front']);
+							} else { print render($page['content']);}?>
 						</div>
 						<div id="mid_content_right" class="col_mid">
 							<?php print render($page['content_right']); ?>
@@ -192,13 +192,13 @@ if ($is_front) {
 
 	<div id="sp0nsors">
 		<h2>Sponsors</h2>
-		<div id="uob" class="col_mid">
+		<div id="s1" class="col_mid">
 			<?php print render($page['footer_two_one']); ?>
 		</div>
-		<div id="umb" class="col_mid col_center">
+		<div id="s2" class="col_mid col_center">
 			<?php print render($page['footer_two_two']); ?>
 		</div>
-		<div id="nlnet" class="col_mid">
+		<div id="s3" class="col_mid">
 			<?php print render($page['footer_two_three']); ?>
 		</div>
 	</div>
