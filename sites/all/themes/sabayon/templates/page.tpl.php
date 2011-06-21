@@ -108,6 +108,12 @@ if ($is_front) {
 		</div>
 	</div><!-- top wrapper end -->
 
+	<div id="menubar">
+		<div class="inside"><!--menubar start-->
+			<?php print render($page['sidebar_first']); ?>
+		</div>
+	</div>
+
 	<div id="mid_wrapper">
 		<div class="inside"><!-- mid wrapper start -->
 			<div id="content">
@@ -137,7 +143,8 @@ if ($is_front) {
 					</div>
 					<div id="main_content_row" class="content_row">
 						<div id="mid_content" class="two_col">
-							<?php print render($page['content']); ?>
+							<?php if (!$is_front) { print render($page['content']);
+							} else { print render($page['front_content']);}?>
 						</div>
 						<div id="mid_content_right" class="col_mid">
 							<?php print render($page['content_right']); ?>

@@ -74,6 +74,7 @@ regions[all_col_left]   = Top Left Content Block (Shown on all Pages)
 regions[all_col_mid]    = Top Mid Content Block (Shown on all Pages)
 regions[all_col_right]  = Top Right Content Block (Shown on all Pages)
 regions[content]        = Content
+regions[content_front]  = Content Area (front only)
 regions[content_right]  = Right Sidebar
 regions[top_summary]    = Top Left Summary
 regions[top_slides]     = Top Right Block
