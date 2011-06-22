@@ -144,6 +144,10 @@ div#content h2 a{
 	display: none;
 }
 
+#footer_wrapper #sp0nsors div.content {
+	height: 60px;
+}
+
 #footer_wrapper #copyright .region-copyright {
 	clear: both;
 	margin: 2em;
