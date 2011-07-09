@@ -3,6 +3,23 @@
  * Navigation Styling
  */
 
+div#menubar {
+	color: #FFF;
+	background-color: #4884c5;
+}
+
+div#menubar div.inside div {
+	display: inline
+}
+
+div#menubar ul.menu,
+div#menubar ul.menu li {
+	display: inline;
+}
+
+div#menubar div#block-search-form {
+	float: right;
+}
 
 /*
  * The active item in a Drupal menu
