@@ -11,9 +11,19 @@ ul.bulletlist {
 }
 
 /* Block */
-.block a:active, .block a:visited, .block a:link {
+.block a:active,
+.block a:visited,
+.block a:link {
 	color: #222222;
 	text-decoration: none;
+}
+
+.block p a,
+.block p a:active,
+.block p a:visited,
+.block p a:link {
+	color: #222222;
+	text-decoration: underline;
 }
 
 .block a:hover {
@@ -49,4 +59,15 @@ ul.bulletlist {
 img.right {
 	float: right;
 	margin: 0 0 1em 1em;
+}
+
+blockquote,
+pre {
+	display: block;
+	width: 100%;
+	padding: 1em;
+	margin: 1em, 0;
+	background: #333;
+	color: #FFF;
+	font-family: monospace;
 }
