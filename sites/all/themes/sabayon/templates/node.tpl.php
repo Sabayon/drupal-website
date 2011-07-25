@@ -91,8 +91,10 @@
 
 		<?php if ($display_submitted): ?>
 			<div class="submitted">
-				<div class="author">Author: <?php print $name ?></div>
-				<div class="submitted">Date: <?php print date('U (Y-m-d g:i:s)', $created) ?></div>
+				<div class="author"><?php print $name ?></div>
+				<div class="submitted" title="<?php print date('Y-m-d g:i:s', $created)?>">
+					<span class="unix_date"><?php print date('U', $created) ?></span>
+				</div>
 			</div>
 		<?php endif; ?>
 	</div>

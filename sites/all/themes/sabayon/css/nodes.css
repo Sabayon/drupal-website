@@ -11,11 +11,11 @@
 }
 
 .node_detail {
-	width: 35%;
-	/*border-top: 1px dotted #666;
+	/*width: 25%;
+	border-top: 1px dotted #666;
 	border-bottom: 1px dotted #666;*/
 	background-color: #000;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 5px;
 	clear: right;
 	margin: 0 0 1em 1em;
@@ -25,24 +25,38 @@
 }
 
 .node_detail .user-picture {
-	float: left;
-	margin: .5em;
+	float: right;
+	margin: .5em 1em .5em .5em;
 }
 
-.node_detail .user-picture a img {
-	width: 45px;
-	height: 45px;
+.node_detail .user-picture a img,
+.node_detail .user-picture img {
+	width: 50px;
+	height: 50px;
 }
 
 .node_detail div.author,
 .node_detail div.submitted {
 	margin: .5em;
 	font-size: 1.1em;
-	line-height: 1.1em;  
+	line-height: 1.3em;
+	text-align: right;  
 }
 
-a.username {
+.username {
+	float: right;
 	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.submitted {
+	float: right;
+	font-size: 0.6em;
+}
+
+span.unix_date {
+	font-family: Inconsolata,monospace;
+	font-size: 1.4em;
 }
 
 .node-sticky /* A sticky node (displayed before others in a list) */ {
