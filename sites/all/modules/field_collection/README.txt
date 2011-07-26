@@ -1,4 +1,3 @@
-$Id: README.txt,v 1.1.2.2 2011/02/01 15:11:42 fago Exp $
 
 Field-collection
 -----------------
