@@ -1,2 +1,6 @@
+INSTALL*
+
 sites/default/settings.php
 sites/all/modules/devel_themer/*
+sites/default/files/styles/thumbnail/public/pictures/*
+sites/default/files/pictures/*
