@@ -6,6 +6,25 @@
  */
 
 /**
+ * Implements hook_menu().
+ */
+function field_collection_table_menu() {
+  $items = array();
+
+  $items['admin/config/user-interface/field_collection_table'] = array(
+    'title' => 'Field Collection Table settings',
+    'description' => 'Configuration of Field Collection Table module options.',
+    'file' => 'field_collection_table.admin.inc',
+    'file path' => drupal_get_path('module', 'field_collection_table') . '/includes',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('field_collection_table_admin_settings'),
+    'access arguments' => array('administer field-collections'),
+  );
+
+  return $items;
+}
+
+/**
  * Implements hook_field_formatter_info().
  */
 function field_collection_table_field_formatter_info() {
@@ -112,7 +131,7 @@ function field_collection_table_field_formatter_view($entity_type, $entity, $fie
  * Implements hook_field_formatter_settings_form().
  */
 function field_collection_table_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
-  return field_collection_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state);
+  return field_collection_field_formatter_settings_form($field, $instance, $view_mode, $form, $form_state);
 }
 
 /**
@@ -140,6 +159,10 @@ function field_collection_table_theme() {
  * Implements hook_form_alter().
  */
 function field_collection_table_form_alter(&$form, &$form_state, $form_id) {
+  if (!variable_get('field_collection_table_format_form', FALSE)) {
+    return;
+  }
+
   if (isset($form['#entity_type']) && isset($form['#bundle'])) {
     foreach (field_info_instances($form['#entity_type'], $form['#bundle']) as $field_name => $instance) {
       $field_info = field_info_field($field_name);
