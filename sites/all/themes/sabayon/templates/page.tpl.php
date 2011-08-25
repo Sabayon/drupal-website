@@ -85,7 +85,6 @@ if ($is_front) {
 			<li><a accesskey="b" href="http://bugs.sabayon.org">Bugs</a></li>
 			<li><a accesskey="p" href="http://planet.sabayon.org">Blog</a></li>
 			<li><a accesskey="a" href="http://packages.sabayon.org">Packages</a></li>
-			<li><a accesskey="a" href="http://www.sabayon.org/api">Entropy API</a></li>
 			<li><a accesskey="g" href="http://gitweb.sabayon.org">Git</a></li>
 			<li><a accesskey="g" href="http://lists.sabayon.org">Lists</a></li>
 			<li><a accesskey="d" href="<?php print $base_path . 'download' ?>">Download</a></li>
