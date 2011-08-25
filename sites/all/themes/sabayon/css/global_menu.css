@@ -2,6 +2,12 @@
  * Global Menu 
  */
 
+#sab_logo {
+	background: url("http://static.sabayon.org/site/img/navbar_sabayon_logo_trans.png") center no-repeat;
+	height: 40px;
+	width: 155px;
+}
+
 #sab_global_menu {
 	padding: 0;
 	margin: 0;
@@ -11,7 +17,6 @@
 
 #sab_global_menu ul {
 	float: right;
-	background: url("http://static.sabayon.org/site/img/navbar_div.png") right center no-repeat;
 }
 
 #sab_global_menu ul li {
@@ -36,5 +41,4 @@
 	
 #sab_global_menu_inner {
 	height: 100%;
-	background: url('http://static.sabayon.org/site/img/navbar_sabayon_logo_trans.png') no-repeat left center;
 }
