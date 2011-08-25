@@ -80,11 +80,14 @@ if ($is_front) {
 		<ul>
 		<li><a style="color:#FFF" accesskey="h" href="<?php print $front_page ?>">Home</a></li>
 			<li><a accesskey="f" href="http://forum.sabayon.org">Forums</a></li>
+			<li><a accesskey="w" href="http://pastebin.sabayon.org">Pastebin</a></li>
 			<li><a accesskey="w" href="http://wiki.sabayon.org">Wiki</a></li>
 			<li><a accesskey="b" href="http://bugs.sabayon.org">Bugs</a></li>
 			<li><a accesskey="p" href="http://planet.sabayon.org">Blog</a></li>
 			<li><a accesskey="a" href="http://packages.sabayon.org">Packages</a></li>
+			<li><a accesskey="a" href="http://www.sabayon.org/api">Entropy API</a></li>
 			<li><a accesskey="g" href="http://gitweb.sabayon.org">Git</a></li>
+			<li><a accesskey="g" href="http://lists.sabayon.org">Lists</a></li>
 			<li><a accesskey="d" href="<?php print $base_path . 'download' ?>">Download</a></li>
 		</ul>
 	</div>
