@@ -6,6 +6,7 @@
 	background: url("http://static.sabayon.org/site/img/navbar_sabayon_logo_trans.png") center no-repeat;
 	height: 40px;
 	width: 155px;
+	float: left;
 }
 
 #sab_global_menu {

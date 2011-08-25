@@ -77,7 +77,7 @@ if ($is_front) {
 
 <div id="sab_global_menu">
 	<div id="sab_global_menu_inner" class="inside">
-		<a href="/"><span id="sab_logo">&nbsp;</span></a>
+		<a href="/"><div id="sab_logo">&nbsp;</div></a>
 		<ul>
 		<li><a style="color:#FFF" accesskey="h" href="<?php print $front_page ?>">Home</a></li>
 			<li><a accesskey="f" href="http://forum.sabayon.org">Forums</a></li>
