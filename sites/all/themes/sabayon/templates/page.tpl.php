@@ -92,6 +92,7 @@ urchinTracker();
 			<li><a accesskey="w" href="http://pastebin.sabayon.org">Pastebin</a></li>
 			<li><a accesskey="w" href="http://wiki.sabayon.org">Wiki</a></li>
 			<li><a accesskey="b" href="http://bugs.sabayon.org">Bugs</a></li>
+			<li><a accesskey="p" href="/press">Press</a></li>
 			<li><a accesskey="p" href="http://planet.sabayon.org">Blog</a></li>
 			<li><a accesskey="a" href="http://packages.sabayon.org">Packages</a></li>
 			<li><a accesskey="g" href="http://gitweb.sabayon.org">Git</a></li>
