@@ -261,3 +261,15 @@ ul.links li {
  */
 .region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
 }
+
+/*
+ * Secondary Menu, shown when logged in
+ */
+
+#secondary-menu {
+        color: #888888;
+}
+#secondary-menu a {
+        color: #FFFFFF;
+       font-size: 1.2em;
+}
