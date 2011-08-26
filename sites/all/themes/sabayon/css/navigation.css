@@ -73,8 +73,8 @@ li a.active {
 /* Sabayon - Set these to none to override the defaults */
 ul.menu li {
   margin: 0;
+  display: inline;
 }
-
 ul li.expanded {
   list-style-type: none;
   list-style-image: none;
@@ -87,4 +87,11 @@ ul li.leaf {
   list-style-image: none;
   list-style-type: none;
   color: #ff0000;
+}
+.region-bottom {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+#block-menu-devel a {
+  color: #aaaaaa;
 }
