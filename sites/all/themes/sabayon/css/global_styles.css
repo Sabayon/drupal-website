@@ -50,6 +50,11 @@ h1.title {
 	width: 63em;
 }
 
+.adsense {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* Base Styles */
 div#content p {
 	font-size: 1.2em;

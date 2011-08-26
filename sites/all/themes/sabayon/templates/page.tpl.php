@@ -146,6 +146,9 @@ if ($is_front) {
 							<?php print render($page['front_col_right']); ?>
 						</div>
 					</div>
+					<div id="col0" class="col_lead">
+						<?php print render($page['front_col']); ?>
+					</div>
 				<?php endif; ?>
 					<div id="page_col_row" class="content_row">
                                         	<div id="all_col1" class="col_mid">
@@ -166,6 +169,9 @@ if ($is_front) {
 						<div id="mid_content_right" class="col_mid">
 							<?php print render($page['content_right']); ?>
 						</div>
+					</div>
+					<div id="content_bottom" class="content_row">
+							<?php print render($page['content_bottom']); ?>
 					</div>
 			</div><!-- /content -->
 		</div><!-- /inside -->
