@@ -75,6 +75,14 @@ if ($is_front) {
 }
 ?>
 
+<!-- analytics -->
+<script src="http://www.google-analytics.com/urchin.js" mce_src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-258726-1";
+urchinTracker();
+</script>
+
 <div id="sab_global_menu">
 	<div id="sab_global_menu_inner" class="inside">
 		<a href="/"><div id="sab_logo">&nbsp;</div></a>
