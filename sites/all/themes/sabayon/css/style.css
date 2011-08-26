@@ -49,6 +49,7 @@ ul.bulletlist {
 #slides {
 	float: right;
 	overflow: hidden;
+	clear: right;
 }
 
 #sides div.content {

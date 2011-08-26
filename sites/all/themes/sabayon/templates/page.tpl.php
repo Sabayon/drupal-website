@@ -90,6 +90,20 @@ if ($is_front) {
 			<li><a accesskey="g" href="http://lists.sabayon.org">Lists</a></li>
 			<li><a accesskey="d" href="<?php print $base_path . 'download' ?>">Download</a></li>
 		</ul>
+
+		<?php print theme('links__system_secondary_menu', array(
+			'links' => $secondary_menu,
+			'attributes' => array(
+			'id' => 'secondary-menu',
+			'class' => array('links'),
+			),
+			'heading' => array(
+			'text' => t('Secondary menu'),
+			'level' => 'h2',
+			'class' => array('element-invisible'),
+			),
+		)); ?>
+
 	</div>
 </div>
 <div id="page-wrapper"><div id="page">
@@ -158,19 +172,6 @@ if ($is_front) {
 	</div> <!-- /mid wrapper -->
 
 	<div id="footer_wrapper"><div class="inside"><!-- footer wrapper start -->
-
-      <?php print theme('links__system_secondary_menu', array(
-        'links' => $secondary_menu,
-        'attributes' => array(
-          'id' => 'secondary-menu',
-          'class' => array('links'),
-        ),
-        'heading' => array(
-          'text' => t('Secondary menu'),
-          'level' => 'h2',
-          'class' => array('element-invisible'),
-        ),
-      )); ?>
 
 	<div id="footer_menu_wrapper">
 		<div id="fm1" class="footer_menu first">
