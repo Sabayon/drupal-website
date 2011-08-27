@@ -9,6 +9,24 @@
  */
 
 .field /* Wrapper for any CCK field. */ {
+	font-size: 1.05em;
+}
+
+.field-label {
+	font-size: 1.4em;
+	padding-top: 0.4em;
+	padding-bottom: 0.6em;
+}
+
+.field-item ul {
+        list-style-type: square;
+        list-style-position: inside;
+}
+
+.field-item li {
+        list-style: square inside none;
+	padding-bottom: 0.5em;
+	font-size: 1.2em;
 }
 
 .field-type-datetime /* Always use "datetime" when creating new CCK date fields. "date" and "datestamp" are legacy types. */ {

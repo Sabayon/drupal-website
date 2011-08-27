@@ -29,6 +29,7 @@ stylesheets[all][]   = css/global_styles.css
 stylesheets[all][]   = css/style.css
 stylesheets[all][]   = css/drupal.css
 stylesheets[all][]   = css/mirrors.css
+stylesheets[all][]   = css/release.css
 
 stylesheets[all][]   = css/wireframes.css
 stylesheets[all][]   = css/layout-fixed.css
