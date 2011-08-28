@@ -90,6 +90,7 @@ urchinTracker();
 		<li><a style="color:#FFF" accesskey="h" href="<?php print $front_page ?>">Home</a></li>
 			<li><a accesskey="f" href="http://forum.sabayon.org">Forums</a></li>
 			<li><a accesskey="w" href="http://pastebin.sabayon.org">Pastebin</a></li>
+			<li><a accesskey="w" href="/chat">Chat</a></li>
 			<li><a accesskey="w" href="http://wiki.sabayon.org">Wiki</a></li>
 			<li><a accesskey="b" href="http://bugs.sabayon.org">Bugs</a></li>
 			<li><a accesskey="p" href="/press">Press</a></li>
