@@ -530,7 +530,7 @@ function _adsense_can_insert_another($type = ADSENSE_TYPE_AD) {
     ADSENSE_TYPE_SEARCH => 2,
   );
 
-  if ($num_ads[$type] < $max_ads[$type]) {
+  if ($num_ads[$type] <= $max_ads[$type]) {
     $num_ads[$type]++;
     return TRUE;
   }
