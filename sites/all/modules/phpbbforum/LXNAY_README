@@ -1,0 +1,6 @@
+This mod requires phpbbdrupalbridge: http://phpbb.drupalbridge.org/download
+but just the library!
+Then, you have to patch phpBB to avoid HTTP500 due to php function redeclaration:
+PHP Fatal error:  Cannot redeclare user_delete() (previously declared in 
+/home/sabayonlinux/public_html/test.sabayon.org/modules/user/user.module:2436) in /home/sabayonlinux/public_html/www.sabayonlinux.org/forum/includes/functions_user.php on line 603
+
