@@ -93,7 +93,7 @@
 			<div class="submitted">
 				<div class="author"><?php print $name ?></div>
 				<div class="submitted" title="<?php print date('Y-m-d g:i:s', $created)?>">
-					<span class="unix_date"><?php print date('U', $created) ?></span>
+					<span class="unix_date"><?php print date('Y-m-d g:i:s', $created)?></span>
 				</div>
 			</div>
 		<?php endif; ?>
