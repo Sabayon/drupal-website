@@ -73,7 +73,11 @@ li a.active {
 /* Sabayon - Set these to none to override the defaults */
 ul.menu li {
   margin: 0;
-  display: inline;
+  /* display: inline; */
+}
+ul.menu {
+  font-size: 1.2em;
+  line-height: 1.3em;
 }
 ul li.expanded {
   list-style-type: none;
