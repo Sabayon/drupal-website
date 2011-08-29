@@ -88,6 +88,7 @@ urchinTracker();
 		<a href="/"><div id="sab_logo">&nbsp;</div></a>
 		<ul>
 		<li><a style="color:#FFF" accesskey="h" href="<?php print $front_page ?>">Home</a></li>
+			<li><a accesskey="f" href="/screenshots">Screenshots</a></li>
 			<li><a accesskey="f" href="http://forum.sabayon.org">Forums</a></li>
 			<li><a accesskey="w" href="http://pastebin.sabayon.org">Pastebin</a></li>
 			<li><a accesskey="w" href="/chat">Chat</a></li>
