@@ -25,6 +25,10 @@ h1.title {
 	background: #FFF url('http://static.sabayon.org/site/img/mid_bg.png') repeat-x top;
 }
 
+#mid_content_right {
+	width: 31em;
+}
+
 .content_row {
 	overflow: hidden;
 	clear: both;
@@ -46,16 +50,17 @@ h1.title {
 }
 
 .col_right {
+	width: 29em;
 }
 
 .col_center {
-	margin: 0 4.6em;
+	margin: 0 3.6em;
 }
 
 #mid_content {
 	clear: left;
 	float: left;
-	margin: 0 3em 0 0;
+	margin: 0 2em 0 0;
 	overflow: hidden;
 	width: 63em;
 }

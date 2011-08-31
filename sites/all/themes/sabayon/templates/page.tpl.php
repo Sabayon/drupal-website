@@ -145,13 +145,13 @@ urchinTracker();
 			<div id="content">
 				<?php if ($is_front): ?>
 					<div id="home_col_row" class="content_row">
-						<div id="col1" class="col_mid col_white">
+						<div id="col3" class="col_mid col_right col_white">
 							<?php print render($page['front_col_left']); ?>
 						</div>
 						<div id="col2" class="col_mid col_center col_white">
 							<?php print render($page['front_col_mid']); ?>
 						</div>
-						<div id="col3" class="col_mid col_right col_white">
+						<div id="col1" class="col_mid col_white">
 							<?php print render($page['front_col_right']); ?>
 						</div>
 					</div>

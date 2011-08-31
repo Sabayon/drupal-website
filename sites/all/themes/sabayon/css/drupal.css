@@ -15,12 +15,12 @@
 }
 
 #download_icon #arrow {
-	background: url("http://static.sabayon.org/site/img/arrowright.png") no-repeat scroll 0 0 transparent;
+	background: url("http://static.sabayon.org/site/img/foot-opaque-small.png") no-repeat scroll 0 0 transparent;
 	display: block;
 	float: right;
-	height: 30px;
-	margin: 16px 1em 0 0;
-	width: 24px;
+	height: 38px;
+	margin: 14px 1em 0 0;
+	width: 38px;
 }
 
 /*
