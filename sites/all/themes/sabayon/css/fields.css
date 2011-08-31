@@ -12,6 +12,11 @@
 	font-size: 1.05em;
 }
 
+.field-items {
+	float: left;
+	clear: both;
+}
+
 .field-label {
 	font-size: 1.4em;
 	padding-top: 0.4em;

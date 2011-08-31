@@ -33,7 +33,7 @@ ul.bulletlist {
 /* Top Block */
 .top_block {
 	color: #FFFFFF;
-	float: left;
+	float: right;
 	position: relative;
 	width: 31em;
 }
@@ -47,13 +47,16 @@ ul.bulletlist {
 
 /* This is the main image, top right */
 #slides {
-	float: right;
+	float: left;
 	overflow: hidden;
-	clear: right;
 }
 
 #sides div.content {
 	overflow: hidden;
+}
+
+.front-header {
+	padding-top: 2em;
 }
 
 /* Front block images */

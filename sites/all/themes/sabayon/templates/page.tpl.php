@@ -117,12 +117,12 @@ urchinTracker();
 </div>
 <div id="page-wrapper"><div id="page">
 	<div id="top_wrapper"><!--top wrapper start -->
-		<div class="inside">
+		<div class="inside front-header">
 			<div id="block1" class="top_block">
-				<?php print render($page['top_summary']); ?>
+				<?php print render($page['top_slides']); ?>
 			</div>
 			<div id="slides">
-				<?php print render($page['top_slides']); ?>
+				<?php print render($page['top_summary']); ?>
 			</div>
 			<?php if (!$is_front): ?>
 				<?php print render($title_prefix); ?>
@@ -145,13 +145,13 @@ urchinTracker();
 			<div id="content">
 				<?php if ($is_front): ?>
 					<div id="home_col_row" class="content_row">
-						<div id="col1" class="col_mid">
+						<div id="col1" class="col_mid col_white">
 							<?php print render($page['front_col_left']); ?>
 						</div>
-						<div id="col2" class="col_mid col_center">
+						<div id="col2" class="col_mid col_center col_white">
 							<?php print render($page['front_col_mid']); ?>
 						</div>
-						<div id="col3" class="col_mid">
+						<div id="col3" class="col_mid col_right col_white">
 							<?php print render($page['front_col_right']); ?>
 						</div>
 					</div>
@@ -159,6 +159,7 @@ urchinTracker();
 						<?php print render($page['front_col']); ?>
 					</div>
 				<?php endif; ?>
+				<?php if (0): ?>
 					<div id="page_col_row" class="content_row">
                                         	<div id="all_col1" class="col_mid">
                                         	        <?php print render($page['all_col_left']); ?>
@@ -170,6 +171,7 @@ urchinTracker();
                                         	        <?php print render($page['all_col_right']); ?>
                                         	</div>
 					</div>
+				<?php endif; ?>
 					<div id="main_content_row" class="content_row">
 						<div id="mid_content" class="two_col">
 							<?php if ($is_front) { print render($page['content_front']);

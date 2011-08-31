@@ -5,7 +5,19 @@
 
 
 .block /* Block wrapper */ {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
+}
+
+.block_white {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: white;
+}
+
+#block-block-14 /* we need your help area */ {
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #D8DAE0;
 }
 
 .block.region-odd /* Zebra striping for each block in the region */ {
