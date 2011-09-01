@@ -12,8 +12,11 @@
 	font-size: 1.05em;
 }
 
+.field-item {
+}
+
 .field-items {
-	float: left;
+	/* float: left; */
 	clear: both;
 }
 
