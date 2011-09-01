@@ -137,10 +137,4 @@ DirectoryIndex index.php index.html index.htm
       Header append Vary Accept-Encoding
     </FilesMatch>
   </IfModule>
-
-  # Old www urls support
-  RewriteRule ^/sabayon/installer/(.*) http://static.sabayon.org/sabayon/installer/$1 [R]
-  RewriteRule ^/sabayon/team/(.*) http://static.sabayon.org/sabayon/team/$1 [R]
-  RewriteRule ^/sabayon/torrents/(.*) http://static.sabayon.org/sabayon/torrents/$1 [R]
-
 </IfModule>
