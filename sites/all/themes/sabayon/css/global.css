@@ -9,7 +9,7 @@ html {
 }
 
 html body {
-	font-family: 'Cantarell', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+	font-family: 'Lucida Sans Unicode', 'Cantarell', 'Lucida Grande', sans-serif;
 	font-size: 66%; /* 11px */
 	line-height: 1.5em;
 }
