@@ -1,5 +1,5 @@
 #download_icon {
-	background: url("http://static.sabayon.org/site/img/go_bg.png") repeat-x scroll 0 0 transparent;
+	background: url("https://static.sabayon.org/site/img/go_bg.png") repeat-x scroll 0 0 transparent;
 	border: 1px solid #447229;
 	border-radius: 0.5em 0.5em 0.5em 0.5em;
 	clear: left;
@@ -15,7 +15,7 @@
 }
 
 #download_icon #arrow {
-	background: url("http://static.sabayon.org/site/img/foot-opaque-small.png") no-repeat scroll 0 0 transparent;
+	background: url("https://static.sabayon.org/site/img/foot-opaque-small.png") no-repeat scroll 0 0 transparent;
 	display: block;
 	float: right;
 	height: 38px;
