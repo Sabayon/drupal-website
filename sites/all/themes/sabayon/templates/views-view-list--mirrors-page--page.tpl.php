@@ -12,7 +12,7 @@
 	<?php if (!empty($title)) : ?>
 		<h2><?php print $title; ?></h2>
 		<?php $flagname = str_replace(' ', '-', $title); ?>
-		<img alt="<?php print $flagname; ?>" src="http://static.sabayon.org/site/img/flags/<?php print $flagname; ?>.png" class="flag flag-<?php print strtolower($flagname); ?>"/>
+		<img alt="<?php print $flagname; ?>" src="https://static.sabayon.org/site/img/flags/<?php print $flagname; ?>.png" class="flag flag-<?php print strtolower($flagname); ?>"/>
 	<?php endif; ?>
 	<?php print $list_type_prefix; ?>
 	 <?php foreach ($rows as $id => $row): ?>

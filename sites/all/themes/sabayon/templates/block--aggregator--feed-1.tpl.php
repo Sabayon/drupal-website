@@ -55,7 +55,7 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
    <div class="content"<?php print $content_attributes; ?>>
-	<img class="right <?php if ($is_front == true) print 'frontpage'?>" src="http://static.sabayon.org/site/content/sabayon.org/img/rss_logo.png" alt="RSS logo">
+	<img class="right <?php if ($is_front == true) print 'frontpage'?>" src="https://static.sabayon.org/site/content/sabayon.org/img/rss_logo.png" alt="RSS logo">
 	<?php print $content; ?>
   </div>
 
