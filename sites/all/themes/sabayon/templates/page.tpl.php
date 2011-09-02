@@ -76,7 +76,7 @@ if ($is_front) {
 ?>
 
 <!-- analytics -->
-<script src="http://www.google-analytics.com/urchin.js" mce_src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+<script src="https://www.google-analytics.com/urchin.js" mce_src="https://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
 <script type="text/javascript">
 _uacct = "UA-258726-1";
@@ -88,11 +88,11 @@ urchinTracker();
 		<a href="/"><div id="sab_logo">&nbsp;</div></a>
 		<ul>
 			<li><a accesskey="f" href="/screenshots">Screenshots</a></li>
-			<li><a accesskey="f" href="http://forum.sabayon.org">Forums</a></li>
+			<li><a accesskey="f" href="https://forum.sabayon.org">Forums</a></li>
 			<li><a accesskey="w" href="http://pastebin.sabayon.org">Pastebin</a></li>
 			<li><a accesskey="w" href="/chat">Chat</a></li>
 			<li><a accesskey="w" href="http://wiki.sabayon.org">Wiki</a></li>
-			<li><a accesskey="b" href="http://bugs.sabayon.org">Bugs</a></li>
+			<li><a accesskey="b" href="https://bugs.sabayon.org">Bugs</a></li>
 			<li><a accesskey="p" href="/press">Press</a></li>
 			<li><a accesskey="a" href="http://packages.sabayon.org">Packages</a></li>
 			<li><a accesskey="g" href="http://gitweb.sabayon.org">Git</a></li>
