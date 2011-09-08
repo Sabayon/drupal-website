@@ -89,14 +89,14 @@ urchinTracker();
 		<ul>
 			<li><a accesskey="f" href="/screenshots">Screenshots</a></li>
 			<li><a accesskey="f" href="https://forum.sabayon.org">Forums</a></li>
-			<li><a accesskey="w" href="http://pastebin.sabayon.org">Pastebin</a></li>
+			<li><a accesskey="w" href="https://pastebin.sabayon.org">Pastebin</a></li>
 			<li><a accesskey="w" href="/chat">Chat</a></li>
-			<li><a accesskey="w" href="http://wiki.sabayon.org">Wiki</a></li>
+			<li><a accesskey="w" href="https://wiki.sabayon.org">Wiki</a></li>
 			<li><a accesskey="b" href="https://bugs.sabayon.org">Bugs</a></li>
 			<li><a accesskey="p" href="/press">Press</a></li>
-			<li><a accesskey="a" href="http://packages.sabayon.org">Packages</a></li>
-			<li><a accesskey="g" href="http://gitweb.sabayon.org">Git</a></li>
-			<li><a accesskey="g" href="http://lists.sabayon.org">Lists</a></li>
+			<li><a accesskey="a" href="https://packages.sabayon.org">Packages</a></li>
+			<li><a accesskey="g" href="https://git.sabayon.org">Git</a></li>
+			<li><a accesskey="g" href="https://lists.sabayon.org">Lists</a></li>
 			<li><a accesskey="d" href="<?php print $base_path . 'download' ?>">Download</a></li>
 		</ul>
 
