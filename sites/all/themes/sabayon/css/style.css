@@ -36,6 +36,7 @@ ul.bulletlist {
 	float: right;
 	position: relative;
 	width: 31em;
+	overflow: hidden;
 }
 
 .top_block p {
