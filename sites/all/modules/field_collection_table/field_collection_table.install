@@ -10,4 +10,5 @@
  */
 function field_collection_table_uninstall() {
   variable_del('field_collection_table_format_form');
+  variable_del('field_collection_table_hide_empty');
 }
