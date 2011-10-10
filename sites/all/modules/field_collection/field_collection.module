@@ -169,8 +169,7 @@ class FieldCollectionItemEntity extends Entity {
    *
    * @param $create_link
    *   (optional) Whether a field-item linking the host entity to the field
-   *   collection item should be created. Should be only disabled if the link
-   *   is created manually.
+   *   collection item should be created.
    */
   public function setHostEntity($entity_type, $entity, $langcode = LANGUAGE_NONE, $create_link = TRUE) {
     if (!empty($this->is_new)) {
@@ -662,31 +661,31 @@ function field_collection_field_formatter_settings_form($field, $instance, $view
   $display = $instance['display'][$view_mode];
   $settings = $display['settings'];
 
-  $form['edit'] = array(
+  $elements['edit'] = array(
     '#type' => 'textfield',
     '#title' => t('Edit link title'),
     '#default_value' => $settings['edit'],
     '#description' => t('Leave the title empty, to hide the link.'),
   );
-  $form['delete'] = array(
+  $elements['delete'] = array(
     '#type' => 'textfield',
     '#title' => t('Delete link title'),
     '#default_value' => $settings['delete'],
     '#description' => t('Leave the title empty, to hide the link.'),
   );
-  $form['add'] = array(
+  $elements['add'] = array(
     '#type' => 'textfield',
     '#title' => t('Add link title'),
     '#default_value' => $settings['add'],
     '#description' => t('Leave the title empty, to hide the link.'),
   );
-  $form['description'] = array(
+  $elements['description'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show the field description beside the add link.'),
     '#default_value' => $settings['description'],
-    '#description' => t('If enabeld adn the add link is shown, the field description is shown in front of the add link.'),
+    '#description' => t('If enabled and the add link is shown, the field description is shown in front of the add link.'),
   );
-  return $form;
+  return $elements;
 }
 
 /**
@@ -760,6 +759,17 @@ function field_collection_field_formatter_view($entity_type, $entity, $field, $i
       }
       break;
   }
+
+  field_collection_field_formatter_links($element, $entity_type, $entity, $field, $instance, $langcode, $items, $display);
+
+  return $element;
+}
+
+/**
+ * Helper function to add links to a field collection field.
+ */
+function field_collection_field_formatter_links(&$element, $entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $settings = $display['settings'];
 
   if ($settings['add'] && ($field['cardinality'] == FIELD_CARDINALITY_UNLIMITED || count($items) < $field['cardinality'])) {
     // Check whether the current is allowed to create a new item.
