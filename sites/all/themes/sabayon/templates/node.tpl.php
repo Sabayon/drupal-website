@@ -85,10 +85,6 @@
 	<div class="node_detail">
 		<?php print $user_picture; ?>
 
-		 <?php if ($unpublished): ?>
-			<div class="unpublished"><?php print t('Unpublished'); ?></div>
-		<?php endif; ?>
-
 		<?php if ($display_submitted): ?>
 			<div class="submitted">
 				<div class="author"><?php print $name ?></div>
@@ -98,6 +94,9 @@
 			</div>
 		<?php endif; ?>
 	</div>
+	<?php if ($unpublished): ?>
+		<div class="unpublished"><?php print t('Unpublished'); ?></div>
+	<?php endif; ?>
 
 	<?php print render($title_prefix); ?>
 	<?php if (!$page && $title): ?>
