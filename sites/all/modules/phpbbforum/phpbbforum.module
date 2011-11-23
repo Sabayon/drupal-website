@@ -1031,26 +1031,11 @@ function phpbbforum_external_login_register($login, $passwd) {
   // Load user to see if it was previously registered
   if (!empty($passwd)) {
     $account = array_shift(user_load_multiple(array(), array('name' => $login)));
-    if ($account->uid) {
+    if (!empty($account->uid)) {
       $email = $account->mail;
     }
-    /*
-     elseif (strpos($login, "@") !== false) {
-     $account = user_load(array('mail' => $login));
-     if ($account->uid) {
-     $email = $login;
-     $login = $account->name;
-     }
-     }
-     */
   }
-  /*
-   if (PHPBB_MODULE_DEBUG) {
-   $message = 'phpBB user: '. $login .' ('. $email .')' .' pass='. $passwd .' auth in phpBB';
-   //_phpbbforum_watchdog($message, array('%name' => $login));
-   _phpbbforum_set_message($message);
-   }
-   */
+  
   if (!empty($passwd) && !phpbb_api_get_user($login, $passwd)) {
     $message = 'The phpBB username %name is not found in phpBB.';
     //_phpbbforum_watchdog($message, array('%name' => $login));
@@ -1075,39 +1060,72 @@ function phpbbforum_external_login_register($login, $passwd) {
   }
 
   $email = $phpbb_user->data['user_email'];
-  // User status: 1=active, 0=banned
-  $status = 1;
-  $user_roles = user_roles(TRUE);
-  $rid = variable_get('phpbbforum_user_role', DRUPAL_AUTHENTICATED_RID);
-  if (!empty($rid) && $rid != DRUPAL_AUTHENTICATED_RID && $rid != DRUPAL_ANONYMOUS_RID && !empty($user_roles[$rid])) {
-    $rname = $user_roles[$rid];
-    $roles = array($rid => $rname);
-  }
-  else {
-    $roles = null;
-  }
+  
   // Load user to see if it was previously registered
   if (!is_object($account)) {
     $account = array_shift(user_load_multiple(array(), array('name' => $login)));
   }
-
-  if (!$account->uid) { // Register new user
-    if (db_query("SELECT uid FROM {users} WHERE LOWER(mail) = LOWER(:mail) AND uid <> :uid", array(':mail' => $login, ':uid' => $account->uid))->fetchField()) {
+  if (!empty($account)) {
+    if (user_is_blocked($login)) {
+      _phpbbforum_watchdog('The phpBB username= %name has not been activated or is blocked.', $var);
+      return false;
+    }
+    elseif (!_phpbbforum_check_admins($account)) {
+      return false;
+    }
+    elseif (!_phpbbforum_check_username_account($account->name, $login)) {
+      _phpbbforum_watchdog('The phpBB username %name is not allowed.', $var);
+      return false;
+    }
+  }
+  
+  if (empty($account->uid)) { // Register new user
+    if (db_query("SELECT * FROM {users} WHERE name = :name", array(':name' => $login))->fetchObject()) {
       $message = 'The phpBB username %name has already been taken by another user.';
       //_phpbbforum_watchdog($message, $var);
       _phpbbforum_set_message($message, $var);
       return false;
     }
+    if (strpos($login, "@") !== false && db_query("SELECT uid FROM {users} WHERE LOWER(mail) = LOWER(:mail)", array(':mail' => $login))->fetchField()) {
+      $message = 'The phpBB username %name has already been taken by another user.';
+      //_phpbbforum_watchdog($message, $var);
+      _phpbbforum_set_message($message, $var);
+      return false;
+    }
+    if (!empty($email)) {
+      if (db_query("SELECT uid FROM {users} WHERE LOWER(mail) = LOWER(:mail)", array(':mail' => $email))->fetchField()) {
+        $message = 'The phpBB username %name has already been taken by another user.';
+        //_phpbbforum_watchdog($message, $var);
+        _phpbbforum_set_message($message, $var);
+        return false;
+      }
+      if (db_query("SELECT uid FROM {users} WHERE name = :name", array(':name' => $email))->fetchObject()) {
+        $message = 'The phpBB username %name has already been taken by another user.';
+        //_phpbbforum_watchdog($message, $var);
+        _phpbbforum_set_message($message, $var);
+        return false;
+      }
 
-    $account = user_save('', array(
-      'name' => $login,
-      'mail' => $email,
-      'timezone' => $phpbb_user->data['user_timezone'] * 60 * 60,
-      'init' => $email,
-      'status' => $status,
-      'roles' => $roles,
-    ));
-
+      $status = 1;
+      $user_roles = user_roles(TRUE);
+      $rid = variable_get('phpbbforum_user_role', DRUPAL_AUTHENTICATED_RID);
+      if (!empty($rid) && $rid != DRUPAL_AUTHENTICATED_RID && $rid != DRUPAL_ANONYMOUS_RID && !empty($user_roles[$rid])) {
+        $rname = $user_roles[$rid];
+        $roles = array($rid => $rname);
+      }
+      else {
+        $roles = null;
+      }
+      
+      $account = user_save('', array(
+        'name' => $login,
+        'mail' => $email,
+        //'timezone' => $phpbb_user->data['user_timezone'] * 60 * 60,
+        'init' => $email,
+        'status' => $status,
+        'roles' => $roles,
+      ));
+    }
     if (!$account) {
       //drupal_set_message(t("Error saving user account."), 'error');
       return false;
@@ -1223,17 +1241,18 @@ function _phpbbforum_drupal_login() {
     _phpbbforum_watchdog('The phpBB username %name is not allowed.', $var);
     return false;
   }
-  $account = array_shift(user_load_multiple(array(), array('name' => $username, 'status' => 1)));
+  //$account = db_query("SELECT * FROM {users} WHERE name = :name", array(':name' => $username))->fetchObject());
+  $account = array_shift(user_load_multiple(array(), array('name' => $username)));
   if ($account) {
     if (user_is_blocked($username)) {
       _phpbbforum_watchdog('The phpBB username= %name has not been activated or is blocked.', $var);
       return false;
     }
-    elseif (drupal_is_denied('user', $username)) {
-      _phpbbforum_watchdog('The phpBB username %name is not allowed.', $var);
+    elseif (!_phpbbforum_check_admins($account)) {
       return false;
     }
-    elseif (!_phpbbforum_check_admins($account)) {
+    elseif (!_phpbbforum_check_username_account($account->name, $username)) {
+      _phpbbforum_watchdog('The phpBB username %name is not allowed.', $var);
       return false;
     }
 
@@ -1275,12 +1294,26 @@ function _phpbbforum_check_admins($account) {
  * Implements _phpbbforum_check_username().
  */
 function _phpbbforum_check_username($username) {
-  $ascii = preg_match('#^[\x01-\x7F]+$#u', $username);
-  $nonascii = preg_match('#^[А-Яа-яЁё]+$#u', $username);
+  /*$ascii = preg_match('#^[\x01-\x7F]+$#u', $username);
+  //$nonascii = preg_match('#^[А-Яа-яЁё]+$#u', $username);
+  $nonascii = preg_match('#^[А-Яа-яЁё0-9-[\]_+ ]+$#u', $username);
   if ($ascii && $nonascii) {
     return false;
-  }
+  }*/
   return true;
+}
+
+/**
+ * Implements _phpbbforum_check_username_account().
+ */
+function _phpbbforum_check_username_account($name, $username) {
+  $lowername = drupal_strtolower($name);
+  $lowerusername = drupal_strtolower($username);
+  if ($lowername == $lowerusername) {
+    //if (strcoll($lowername, $username) == 0) {
+    return true;
+  }
+  return false;
 }
 
 /**
