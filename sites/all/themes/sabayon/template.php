@@ -234,4 +234,3 @@ function sabayon_field($variables) {
 }
 
 ?>
-
