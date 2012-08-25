@@ -7,13 +7,16 @@ dependencies[] = adsense
 package = Adsense
 core = 7.x
 
+configure = admin/config/services/adsense/cse
+
 files[] = adsense_cse.module
 files[] = adsense_cse.install
 files[] = adsense_cse.admin.inc
+files[] = adsense_cse.results.inc
 
-; Information added by drupal.org packaging script on 2011-03-05
-version = "7.x-1.x-dev"
+; Information added by drupal.org packaging script on 2012-03-31
+version = "7.x-1.0"
 core = "7.x"
 project = "adsense"
-datestamp = "1299283286"
+datestamp = "1333237238"
 
