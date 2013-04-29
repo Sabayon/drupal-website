@@ -95,7 +95,7 @@ urchinTracker();
 			<li><a accesskey="b" href="https://bugs.sabayon.org">Bugs</a></li>
 			<li><a accesskey="p" href="/press">Press</a></li>
 			<li><a accesskey="a" href="https://packages.sabayon.org">Packages</a></li>
-			<li><a accesskey="g" href="https://git.sabayon.org">Git</a></li>
+			<li><a accesskey="g" href="https://github.com/Sabayon">Git</a></li>
 			<li><a accesskey="g" href="https://lists.sabayon.org">Lists</a></li>
 			<li><a accesskey="d" href="<?php print $base_path . 'download' ?>">Download</a></li>
 		</ul>
