@@ -2,5 +2,7 @@
 sites/*/settings*.php
 
 # Ignore paths that contain user-generated content.
-sites/*/files
+sites/default/files/*
+!sites/default/files/.chown-ignore
+!sites/default/files/.htaccess
 sites/*/private
